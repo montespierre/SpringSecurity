@@ -1,23 +1,19 @@
 package com.montespierre.app.entity;
 
-import java.io.Serializable;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="empleados")
-public class Empleado implements Serializable{
-	
-	private static final long serialVersionUID = 1L;
+public class Empleado{
+
 
 	@Id
 	@Column(name="idEmpleado")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_empleados")
 	private Long idEmpleado;
 	
 	@Column(name="nomEmp")
@@ -27,13 +23,13 @@ public class Empleado implements Serializable{
 	private String puestoEmp;
 	
 	@Column(name="telEmp")
-	private Long telEmp;
+	private String telEmp;
 	
 	public Empleado() {
 		idEmpleado = 0L;
 		nomEmp = "";
 		puestoEmp = "";
-		telEmp = 0L;
+		telEmp = "";
 	}
 
 	public Long getIdEmpleado() {
@@ -60,11 +56,11 @@ public class Empleado implements Serializable{
 		this.puestoEmp = puestoEmp;
 	}
 
-	public Long getTelEmp() {
+	public String getTelEmp() {
 		return telEmp;
 	}
 
-	public void setTelEmp(Long telEmp) {
+	public void setTelEmp(String telEmp) {
 		this.telEmp = telEmp;
 	}
 
