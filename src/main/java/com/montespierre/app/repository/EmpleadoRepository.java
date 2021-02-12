@@ -6,4 +6,5 @@ import com.montespierre.app.entity.Empleado;
 
 public interface EmpleadoRepository extends CrudRepository<Empleado, Long>{
 
+	Empleado findByNomEmp(String nomEmp);
 }
