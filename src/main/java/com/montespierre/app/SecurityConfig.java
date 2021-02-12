@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.authenticated()
 			.and()
 			.httpBasic();
-		//dice que cualquier peticion que entra debe estar autenticada
+		//dice que cualquier peticion que entra debe estar autenticad
 	}
 	
 	
